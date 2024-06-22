@@ -230,16 +230,17 @@ html, body{
     width: 100%;
     background-color: #151515;
     position: relative;
-    padding: 17vh 0;
+    padding: 17vh 2vw;
 }
 #page3 h1{
     font-size: 7vw;
     text-transform: uppercase;
     position: relative;
     margin-left: 28vw;
+    margin-bottom: 5vh;
 }
 #page3 h1::before{
-    content: "03";
+    content: "02";
     position: absolute;
     font-size: 3.3vw;
     font-family: "silk serif";
@@ -253,6 +254,25 @@ html, body{
 
 #image-div-container{
     background-color: red;
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-div{
+    height: 33vw;
+    position: relative;
+    overflow: hidden;
+    width: 24vw;
+    background-color: blue;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 #page4{
@@ -461,3 +481,7 @@ html, body{
     margin: 2vw 0 0 0;
 }
 
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
+}
