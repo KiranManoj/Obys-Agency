@@ -91,20 +91,17 @@ function loadingAnimation() {
 }
 
 function cursorAnimation(){
-    document.addEventListener("mousemove",function(dets){
-        gsap.to("#crsr",{
-            left:dets.x,
-            top:dets.y
-        });
+    Shery.mouseFollwer({
+        skew: true,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
     });
-    
     // Make Magnet Feature
     Shery.makeMagnet("#nav-part2 h4");
+    document.querySelector("#video-container").addEventListener("mouseenter",function(){
+        alert("Hovering over the video");
+    })
 }
-
-loadingAnimation();
-// cursorAnimation();
-locomotiveAnimation();
 
 function sheryAnimation(){
     Shery.imageEffect(".image-div",{
@@ -114,4 +111,7 @@ function sheryAnimation(){
     })
 }
 
+loadingAnimation();
+locomotiveAnimation();
+cursorAnimation();
 sheryAnimation();
