@@ -61,7 +61,7 @@ function loadingAnimation() {
         } else {
           h5timer.innerHTML = grow;
         }
-      }, 33);
+      }, 27);
     },
   });
 
